@@ -14,7 +14,8 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: {
       provider: 'umami',
-      host: 'stat.digu.plus',
+      host: 'https://stat.digu.plus',
+      scriptName: '7312afd728c24810b060a0c9b4430032',
       websiteId: 'e5609af0-b781-4656-8361-813d504dfae9'
     },
     locale: "zh-CN",
