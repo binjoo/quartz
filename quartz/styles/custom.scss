@@ -1,3 +1,35 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+table {
+  width: 100%;
+  margin: 1rem 0 !important;
+  // background-color: var(--light);
+  // border: 1px solid var(--gray);
+  // color: var(--dark);
+
+  // 表头样式
+  thead tr {
+    background-color: var(--secondary);
+    color: var(--light);
+    text-align: left;
+  }
+
+  // 表格单元格样式
+  th,
+  td {
+    border: 1px solid var(--lightgray);
+  }
+
+  // 隔行变色效果 - 奇数行
+  tbody tr {
+    &:nth-child(odd) {
+      background-color: var(--light);
+    }
+
+    &:nth-child(even) {
+      background-color: var(--highlight);
+    }
+  }
+
+}
