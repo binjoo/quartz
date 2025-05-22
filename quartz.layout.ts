@@ -19,7 +19,10 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
+      component: Component.Breadcrumbs({
+        rootName: "首页",
+        showCurrentPage: false
+      }),
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
@@ -63,15 +66,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({
-      mapFn: (node) => {
-        if (node.isFolder) {
-          node.displayName = "📁 " + node.displayName
-        } else {
-          node.displayName = "📄 " + node.displayName
-        }
-      },
-    }),
+    Component.Explorer(),
   ],
   right: [],
 }
