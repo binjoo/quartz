@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       "嘀咕": "https://digu.plus",
-      "Status": "https://status.plus",
+      "Status": "https://status.digu.plus",
       "GitHub": "https://github.com/jackyzha0/quartz",
     },
   }),
